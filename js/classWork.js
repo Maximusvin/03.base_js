@@ -32,7 +32,11 @@ btnRef.addEventListener("click", (event) => {
   const user = inputRef.value;
   inputRef.value = "";
 
-  t4.textContent = `${user} Батькович`;
+  if (!user.trim()) {
+    t4.textContent = "You did not enter a name";
+  } else {
+    t4.textContent = `${user} Батькович`;
+  }
 });
 
 // task-5
